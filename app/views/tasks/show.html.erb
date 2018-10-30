@@ -1,0 +1,17 @@
+<h2><%= @task[:title] %></h2>
+
+<h3><%= @task[:details] %></h3>
+
+<% if @task[:completed] %>
+<p><input type="checkbox" checked disabled>This task is completed</p>
+<% else %>
+<p><input type="checkbox" disabled>This task is not completed</p>
+<% end %>
+
+<hr>
+
+<p><%= link_to "Back To List", tasks_path %></p>
+<p><%= link_to "Edit This Task", edit_task_path %></p>
+
+
+<p><%= link_to "Delete This Task", task_path, method: :delete %></p>
